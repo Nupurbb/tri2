@@ -171,3 +171,62 @@ $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
+
+
+// Variables
+$primary-color: #ff6b6b; // Pink color
+$secondary-color: #fff; // White color
+$button-bg-color: #ffb8b8; // Light pink for button background
+$button-hover-color: #ff9999; // Lighter pink for button hover effect
+
+// Calculator container
+.calculator {
+  background-color: $secondary-color;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  
+  // Calculator display
+  .display {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  // Calculator buttons
+  .buttons {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    
+    button {
+      background-color: $button-bg-color;
+      color: $primary-color;
+      padding: 15px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: $button-hover-color;
+      }
+      
+      &.equal {
+        grid-column: span 2;
+      }
+      
+      &.clear {
+        grid-column: span 3;
+      }
+    }
+  }
+}
